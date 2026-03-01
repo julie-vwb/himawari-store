@@ -33,7 +33,7 @@
             overflow-x: hidden;
         }
 
-        /* --- BACKGROUND DECORATION (Floating Emojis) --- */
+        /* --- BACKGROUND DECORATION --- */
         .background-emojis {
             position: fixed;
             top: 0;
@@ -61,8 +61,6 @@
         .emoji-3 { top: 45%; left: 5%; animation-delay: 2s; }
         .emoji-4 { top: 65%; right: 8%; animation-delay: 3s; }
         .emoji-5 { bottom: 10%; left: 15%; animation-delay: 4s; }
-        .emoji-6 { top: 15%; left: 40%; font-size: 20px; opacity: 0.15; }
-        .emoji-7 { top: 10%; right: 40%; font-size: 22px; opacity: 0.15; }
 
         .container {
             width: 100%;
@@ -87,6 +85,15 @@
             height: 160px;
             margin: 0 auto 25px;
         }
+
+        .logo-deco {
+            position: absolute;
+            font-size: 24px;
+            z-index: 3;
+            animation: float-soft 4s ease-in-out infinite alternate;
+        }
+        .deco-ribbon { top: -10px; left: -10px; }
+        .deco-cloud { bottom: 0px; right: -15px; animation-delay: 1s; }
 
         .logo-container {
             width: 100%;
@@ -317,7 +324,7 @@
 
         /* --- FOOTER --- */
         .footer-section {
-            padding: 40px 20px;
+            padding: 20px 20px 40px;
             text-align: center;
         }
 
@@ -335,17 +342,47 @@
             box-shadow: 0 6px 20px rgba(232, 137, 181, 0.4);
         }
 
-        .social-links { display: flex; flex-direction: column; gap: 10px; }
-        .social-btn {
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .social-pill {
             background: #fff;
-            padding: 12px;
-            border-radius: 25px;
+            padding: 10px 25px;
+            border-radius: 30px;
             font-size: 14px;
             color: var(--darker-pink);
             text-decoration: none;
             border: 1px solid #ffeef5;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 10px rgba(246, 165, 201, 0.2);
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .social-pill:hover { transform: scale(1.05); }
+
+        .pill-num {
+            background: var(--main-pink);
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #9b7e8d;
+            margin-top: 10px;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -357,15 +394,15 @@
     <span class="floating-emoji emoji-3">🍥</span>
     <span class="floating-emoji emoji-4">💒</span>
     <span class="floating-emoji emoji-5">☁️</span>
-    <span class="floating-emoji emoji-6">✨</span>
-    <span class="floating-emoji emoji-7">🎀</span>
 </div>
 
 <div class="container">
     <div class="light-section">
         <div class="logo-wrapper">
+            <span class="logo-deco deco-ribbon">🎀</span>
+            <span class="logo-deco deco-cloud">☁️</span>
             <div class="logo-container">
-                <img src="10761b15447cbbe012b6b598d42d127d.jpeg" alt="Himawari Logo">
+                <img src="Logo.jpeg" alt="Himawari Logo">
             </div>
         </div>
         <div class="shop-name-row">
@@ -449,10 +486,15 @@
 
     <div class="footer-section">
         <a href="https://lin.ee/XcbAB2v" target="_blank" class="contact-btn">Line OA 🎀</a>
-        <div class="social-links">
-            <a href="https://www.facebook.com/himawari.378446" target="_blank" class="social-btn">Facebook ✨</a>
-            <a href="https://www.instagram.com/himawr.official?igsh=Z2tua28yaTV3ZDNz" target="_blank" class="social-btn">Instagram 🍥</a>
+        <div class="social-row">
+            <a href="https://www.facebook.com/himawari.378446" target="_blank" class="social-pill">
+                <span class="pill-num">1</span> Facebook ✨
+            </a>
+            <a href="https://www.instagram.com/himawr.official?igsh=Z2tua28yaTV3ZDNz" target="_blank" class="social-pill">
+                <span class="pill-num">2</span> Instagram 🍥
+            </a>
         </div>
+        <p class="copyright">© 2026 himawari • ขอบคุณที่ไว้วางใจยินดีให้บริการค่ะ🎈</p>
     </div>
 </div>
 
